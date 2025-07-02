@@ -1,0 +1,86 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f6f9f8;
+  color: #333;
+}
+
+header {
+  background: #4ca1af;
+  color: #fff;
+  padding: 1rem 2rem;
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+main {
+  padding: 2rem;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+section img {
+  max-width: 300px;
+  display: block;
+}
+
+.btn {
+  display: inline-block;
+  background: #4ca1af;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+form {
+  max-width: 400px;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+form label {
+  display: block;
+  margin-top: 1rem;
+}
+
+form input,
+form select {
+  width: 100%;
+  padding: 0.5rem;
+}
+
+form button {
+  margin-top: 1rem;
+  background: #4ca1af;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #333;
+  color: #fff;
+  margin-top: 2rem;
+}
