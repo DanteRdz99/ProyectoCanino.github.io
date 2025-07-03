@@ -20,13 +20,46 @@
 
   <main>
     <h2>Opiniones de nuestros clientes</h2>
+
     <div class="comentario">
-      <h3>Título de la reseña</h3>
-      <p>Descripción de la experiencia...</p>
+      <h3>Excelente Servicio</h3>
+      <p>Mi perro regresó feliz después del paseo. Muy recomendados.</p>
       <p>⭐⭐⭐⭐⭐</p>
+    </div>
+
+    <div class="comentario">
+      <h3>Muy atentos</h3>
+      <p>El cuidador fue muy amable y responsable.</p>
+      <p>⭐⭐⭐⭐</p>
     </div>
 
     <h2>Deja tu comentario</h2>
     <form>
       <label for="titulo">Título:</label>
-      <in
+      <input type="text" id="titulo" name="titulo" required>
+
+      <label for="experiencia">Experiencia:</label>
+      <textarea id="experiencia" name="experiencia" rows="4" required></textarea>
+
+      <label for="estrellas">Calificación:</label>
+      <select id="estrellas" name="estrellas" required>
+        <option value="">Selecciona</option>
+        <option value="1">⭐</option>
+        <option value="2">⭐⭐</option>
+        <option value="3">⭐⭐⭐</option>
+        <option value="4">⭐⭐⭐⭐</option>
+        <option value="5">⭐⭐⭐⭐⭐</option>
+      </select>
+
+      <button type="submit" class="btn">Enviar Comentario</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Aventuras Caninas</p>
+  </footer>
+
+  <!-- Conecta tu script si quieres validación -->
+  <script src="js/comentarios.js"></script>
+</body>
+</html>
