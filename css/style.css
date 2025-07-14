@@ -1,9 +1,11 @@
+/* === style.css === */
+
 :root {
-  --color-primary: #8B5E3C; 
-  --color-accent: #A67B5B; 
-  --color-bg: #FAF3E0; 
+  --color-primary: #8B5E3C;   /* Marrón cálido */
+  --color-accent: #A67B5B;    /* Marrón claro */
+  --color-bg: #FAF3E0;        /* Beige suave */
   --color-text: #333;
-  --color-btn-hover: #70432A; 
+  --color-btn-hover: #70432A;
 }
 
 body {
@@ -16,77 +18,43 @@ body {
 header {
   background: var(--color-primary);
   color: #fff;
-  padding: 1rem 2rem;
-  position: sticky;
-  top: 0;
+  padding: 1rem;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
 }
 
 nav ul {
   list-style: none;
   padding: 0;
   display: flex;
-  justify-content: center; /* Centra el menú */
-  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin: 0.5rem 0 0;
 }
 
 nav a {
   color: #fff;
   text-decoration: none;
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  transition: background 0.3s, color 0.3s;
-}
-
-nav a:hover {
-  background: rgba(255, 255, 255, 0.2);
-  color: #f0f0f0;
-}
-
-main {
-  padding: 2rem;
-}
-
-.btn {
-  display: inline-block;
-  background: var(--color-primary);
-  color: #fff;
-  padding: 0.7rem 1.5rem;
-  border-radius: 30px; /* Bordes redondeados tipo pill */
-  text-decoration: none;
-  font-weight: 600;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  transition: background 0.3s, transform 0.2s;
-}
-
-.btn:hover {
-  background: var(--color-btn-hover);
-  transform: translateY(-2px); /* Efecto levantado */
-}
-
-
-form input,
-form select,
-form textarea {
-  width: 100%;
-  padding: 0.5rem;
-  margin-top: 0.3rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-form button {
-  background: var(--color-primary);
-  border: none;
-  padding: 0.7rem 1.2rem;
-  color: #fff;
-  cursor: pointer;
-  margin-top: 1rem;
-  border-radius: 5px;
+  padding: 0.4rem 0.8rem;
+  border-radius: 15px;
+  background: rgba(255,255,255,0.2);
+  font-size: 0.95rem;
   transition: background 0.3s;
 }
 
-form button:hover {
-  background: var(--color-btn-hover);
+nav a:hover {
+  background: rgba(255,255,255,0.4);
+}
+
+main {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
 }
 
 section {
@@ -96,19 +64,85 @@ section {
 
 section img {
   display: block;
-  margin: 0 auto 1rem auto; 
-  width: 300px;  
-  height: 300px;
-  object-fit: cover; 
-  border-radius: 10px; 
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2); 
+  margin: 1rem auto;
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
 
+h2 {
+  color: var(--color-primary);
+}
 
-footer {
+form label {
+  display: block;
+  margin: 0.5rem 0 0.2rem;
+}
+
+form input,
+form select,
+form textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  display: block;
+  width: 100%;
   background: var(--color-primary);
   color: #fff;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 30px;
+  margin-top: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+form button:hover {
+  background: var(--color-btn-hover);
+}
+
+.btn {
+  display: inline-block;
+  background: var(--color-primary);
+  color: #fff;
+  padding: 0.7rem 1.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: background 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+  background: var(--color-btn-hover);
+  transform: translateY(-2px);
+}
+
+footer {
   text-align: center;
+  background: var(--color-primary);
+  color: #fff;
   padding: 1rem;
   margin-top: 2rem;
+  font-size: 0.85rem;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  section img {
+    width: 100%;
+    height: auto;
+  }
 }

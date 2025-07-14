@@ -5,6 +5,92 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Comentarios - Aventuras Caninas</title>
   <link rel="stylesheet" href="css/style.css"/>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0 1rem;
+      background: #faf3e0;
+      color: #333;
+    }
+
+    header {
+      background: #8b5e3c;
+      color: #fff;
+      padding: 1rem 0;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0.5rem 0 0 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      background: rgba(255,255,255,0.2);
+      padding: 0.4rem 0.8rem;
+      border-radius: 15px;
+      font-size: 0.9rem;
+    }
+
+    main {
+      max-width: 500px;
+      margin: 1rem auto;
+    }
+
+    .comentario {
+      background: #fff;
+      border-radius: 8px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #8b5e3c;
+    }
+
+    form label {
+      display: block;
+      margin: 0.5rem 0 0.2rem;
+    }
+
+    form input,
+    form textarea,
+    form select {
+      width: 100%;
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    form button {
+      display: block;
+      width: 100%;
+      background: #8b5e3c;
+      color: #fff;
+      padding: 0.7rem;
+      border: none;
+      border-radius: 30px;
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.8rem;
+      margin: 2rem 0 1rem;
+      color: #666;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -23,7 +109,7 @@
 
     <div class="comentario">
       <h3>Excelente Servicio</h3>
-      <p>Mi perro regresó feliz después del paseo. Muy recomendados.</p>
+      <p>Mi perro regresó feliz después del paseo.</p>
       <p>⭐⭐⭐⭐⭐</p>
     </div>
 
@@ -36,10 +122,10 @@
     <h2>Deja tu comentario</h2>
     <form>
       <label for="titulo">Título:</label>
-      <input type="text" id="titulo" name="titulo" required>
+      <input type="text" id="titulo" name="titulo" placeholder="Ej: Excelente Servicio" required>
 
       <label for="experiencia">Experiencia:</label>
-      <textarea id="experiencia" name="experiencia" rows="4" required></textarea>
+      <textarea id="experiencia" name="experiencia" rows="4" placeholder="Describe tu experiencia..." required></textarea>
 
       <label for="estrellas">Calificación:</label>
       <select id="estrellas" name="estrellas" required>
@@ -51,15 +137,14 @@
         <option value="5">⭐⭐⭐⭐⭐</option>
       </select>
 
-      <button type="submit" class="btn">Enviar Comentario</button>
+      <button type="submit">Enviar Comentario</button>
     </form>
   </main>
 
   <footer>
-    <p>&copy; 2025 Aventuras Caninas</p>
+    &copy; 2025 Aventuras Caninas
   </footer>
-
-  <!-- Conecta tu script si quieres validación -->
-  <script src="js/comentarios.js"></script>
 </body>
+<script src="JS/main.js"></script>
+<script src="js/comentarios.js"></script>
 </html>
