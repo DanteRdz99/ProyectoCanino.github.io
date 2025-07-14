@@ -1,10 +1,27 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8"/>
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Nosotros - Aventuras Caninas</title>
   <link rel="stylesheet" href="css/style.css"/>
+  <style>
+    .nosotros {
+      max-width: 800px;
+      margin: 2rem auto;
+      text-align: center;
+      padding: 0 1rem;
+    }
+
+    .nosotros img {
+      display: block;
+      margin: 0 auto 1rem auto;
+      width: 300px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -12,21 +29,27 @@
     <nav>
       <ul>
         <li><a href="index.html">Inicio</a></li>
-        <li><a href="nosotros.html">Nosotros</a></li>
-        <li><a href="contactanos.html">Contáctanos</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="citas.html">Reservar Cita</a></li>
+        <li><a href="comentarios.html">Comentarios</a></li>
+        <li><a href="login.html">Iniciar Sesión</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <h2>Quiénes Somos</h2>
-    <p>Somos Aventuras Caninas, un equipo dedicado a brindar cuidado y diversión a tus mascotas cuando más lo necesiten.</p>
-    <img src="IMG/quienessomos.jpg" alt="Equipo Aventuras Caninas">
+    <section class="nosotros">
+      <img src="img/quienessomos.jpg" alt="Equipo Aventuras Caninas">
+      <h2>¿Quiénes somos?</h2>
+      <p>
+        Somos un equipo apasionado por el bienestar y la felicidad de tus mascotas.
+        Ofrecemos servicios de paseo y cuidado con profesionales certificados que aman lo que hacen.
+      </p>
+    </section>
   </main>
 
   <footer>
     <p>&copy; 2025 Aventuras Caninas</p>
   </footer>
-  <script src="js/main.js"></script>
 </body>
 </html>
