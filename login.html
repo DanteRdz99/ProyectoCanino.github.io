@@ -1,10 +1,43 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8"/>
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Iniciar Sesión - Aventuras Caninas</title>
   <link rel="stylesheet" href="css/style.css"/>
+  <style>
+    .input-group {
+      position: relative;
+    }
+
+    .input-group input {
+      width: 100%;
+      padding-right: 40px;
+    }
+
+    .input-group .toggle-password {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      font-size: 1.1rem;
+      color: #888;
+    }
+
+    .register-link {
+      display: block;
+      text-align: center;
+      margin-top: 1rem;
+      font-size: 0.9rem;
+    }
+
+    .register-link a {
+      color: var(--color-primary);
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -12,30 +45,44 @@
     <nav>
       <ul>
         <li><a href="index.html">Inicio</a></li>
-        <li><a href="login.html">Iniciar Sesión</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="citas.html">Reservar Cita</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <h2>Accede a tu cuenta</h2>
     <form>
-      <label for="telefono">Teléfono:</label>
-      <input type="text" id="telefono" name="telefono" required>
+      <label for="email">Correo electrónico:</label>
+      <input type="email" id="email" name="email" placeholder="ejemplo@email.com" required>
 
-      <label for="contrasena">Contraseña:</label>
-      <input type="password" id="contrasena" name="contrasena" required>
+      <label for="password">Contraseña:</label>
+      <div class="input-group">
+        <input type="password" id="password" name="password" placeholder="Tu contraseña" required>
+        <span class="toggle-password" id="togglePassword">&#128065;</span>
+      </div>
 
-      <button type="submit">Iniciar Sesión</button>
+      <button type="submit" class="btn">Iniciar Sesión</button>
+
+      <span class="register-link">
+        ¿No tienes cuenta? <a href="registro.html">Regístrate aquí</a>
+      </span>
     </form>
-
-    <p>¿No tienes cuenta? <a href="registro.html">Regístrate aquí</a></p>
   </main>
 
   <footer>
     <p>&copy; 2025 Aventuras Caninas</p>
   </footer>
-  <script src="js/main.js"></script>
-  <script src="JS/login.js"></script>
+
+  <script>
+    const togglePassword = document.querySelector("#togglePassword");
+    const passwordInput = document.querySelector("#password");
+
+    togglePassword.addEventListener("click", () => {
+      const type = passwordInput.getAttribute("type") === "password" ? "text" : "password";
+      passwordInput.setAttribute("type", type);
+      togglePassword.textContent = type === "password" ? "👁️" : "🙈";
+    });
+  </script>
 </body>
 </html>
